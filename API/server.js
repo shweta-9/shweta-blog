@@ -164,7 +164,7 @@ app.post('/upload', function(req, res) {
 });
 
 //ALWAYS GOES AT END OF DOCUMENT
-app.listen(8080, function() {
+app.listen(80, function() {
 	console.log('server started on http://localhost:8080');
 	console.log('Press CTRL + C to stop server');
 });
