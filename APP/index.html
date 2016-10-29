@@ -34,57 +34,51 @@
 
 </head>
 <body ng-app="blogApp" ng-controller="navCtrl as ctrl">
-<nav>
-	<div class="nav-bar">
-		<a ui-sref="blog"><img class="logo" src="../assets/img/logo_white.png"></a>
-		
-		<div class="menu">
-			<div class="about">
-			<a class="nav-title" ui-sref="about">about</a>
-				<img class="nav-icon" src="../assets/img/info-icon.png">
+	<nav>
+		<div class="nav-bar">
+			<a ui-sref="blog"><img class="logo" src="../assets/img/logo_white.png"></a>
+			
+			<div class="menu">
+				<div class="about">
+				<a class="nav-title" ui-sref="about">about</a>
+					<img class="nav-icon" src="../assets/img/info-icon.png">
+				</div>
+				<div class="search">
+				<button class="nav-title b" data-toggle="modal" data-target="#myModal">search</button>
+					<img class="nav-icon" src="../assets/img/search-icon.png">
+				</div>
 			</div>
-			<div class="search">
-			<button class="nav-title b" data-toggle="modal" data-target="#myModal">search</button>
-				<img class="nav-icon" src="../assets/img/search-icon.png">
-			</div>
+		</div>
+
+	</nav>
+
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="my-modal-container post-box">
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		    <input class="searchbar" type="text" name="search" ng-model="ctrl.search" />
+		    <div ng-click="ctrl.searchAll();">search</div>
 		</div>
 	</div>
 
-</nav>
-
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-	<div class="my-modal-container post-box">
-		<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-	    <input class="searchbar" type="text" name="search" ng-model="ctrl.search" />
-	    <div ng-click="ctrl.searchAll();">search</div>
-	</div>
-</div>
-
-<!-- Modal -->
+	<!-- Modal -->
 
 
-<ui-view></ui-view>
+	<ui-view></ui-view>
 
 
-<footer>
-	<div id="wrapper">
-		<div id="header" class="footer">
-			<div id="content" class="footerbox">
-				<h5 class="copyright">© shweta s</h5>
+	<footer>
+		<div id="wrapper">
+			<div id="header" class="footer">
+				<div id="content" class="footerbox">
+					<h5 class="copyright">© shweta s</h5>
+				</div>
+			</div>
+			<div id="footer">
+			
 			</div>
 		</div>
-		<div id="footer">
-		
-		</div>
-	</div>
-</footer>
+	</footer>
 
-
-<!-- <div id="wrapper">
-		<div id="header"></div>
-		<div id="content" class="footer">blah blah blah</div>
-		<div id="footer"></div>
-	</div> -->
 
 </body>
 </html>
